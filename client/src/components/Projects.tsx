@@ -28,7 +28,7 @@ export default function Projects() {
           </h3>
           <p className="text-gray-600 max-w-2xl">
             From wireframes to deployable code, I lead projects through every phase—UX strategy, frontend UI, backend APIs, and database modeling. I’ve built full-stack applications using React, TypeScript, Node.js, PostgreSQL, and more, always ensuring design and function work seamlessly together.
-            <br>
+            <br/>
               Each project reflects a blend of creativity and code—responsive interfaces, scalable backends, and thoughtful user flows.
           </p>
         </div>
