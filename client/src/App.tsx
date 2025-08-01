@@ -7,22 +7,22 @@ import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 
 function Router() {
-   return (
-     <Switch>
-       <Route path="/" component={Home} />
-       <Route component={NotFound} />
-     </Switch>
-   );
-  }
+  return (
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route component={NotFound} />
+    </Switch>
+  );
+}
 
 function App() {
-   return (
-   <QueryClientProvider client={queryClient}>
+  return (
+    <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-          <Toaster />
-          <Router />
+        <Toaster />
+        <Router />
       </TooltipProvider>
-   </QueryClientProvider>
+    </QueryClientProvider>
   );
 }
 

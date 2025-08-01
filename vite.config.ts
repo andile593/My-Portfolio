@@ -10,7 +10,10 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
   root: "client",
-  plugins: [react(), tailwindcss(),],
+  plugins: [
+    tailwindcss(),
+    react() 
+  ],
   resolve: {
     alias: {
        "@": path.resolve(__dirname, "client", "src"),
