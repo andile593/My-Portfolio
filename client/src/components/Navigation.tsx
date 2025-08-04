@@ -26,17 +26,18 @@ export default function Navigation() {
             >
               Projects
             </button>
-            <button 
-              onClick={() => scrollToSection('skills')} 
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Skills
-            </button>
+            
             <button 
               onClick={() => scrollToSection('about')} 
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               About
+            </button>
+            <button 
+              onClick={() => scrollToSection('skills')} 
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              Skills
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 
