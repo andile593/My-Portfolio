@@ -1,5 +1,5 @@
 // Using attached image
-const profileImage = 'https://i.postimg.cc/Gmw8BMBZ/71168590.jpg';
+const profileImage = "/profile.png";
 
 export default function Hero() {
   return (
@@ -16,8 +16,8 @@ export default function Hero() {
             <div className="relative w-full aspect-square bg-gray-100 grid-overlay rounded-lg overflow-hidden">
               <img 
                 src={profileImage} 
-                alt="Andile Mhlanga - UI/UX Designer" 
-                className="w-full h-full object-cover mix-blend-multiply"
+                alt="Andile Mhlanga - Full-Stack Developer" 
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

@@ -1,21 +1,87 @@
-const projects = [
+import { useState } from "react";
+import { Link } from "wouter";
+
+const featuredProjects = [
+  {
+    id: 0,
+    title: "Flaws",
+    description: "Live e-commerce storefront for a premium streetwear brand based in Johannesburg — full-stack build with real-time courier tracking, order management, and a decoupled frontend/backend architecture.",
+    image: "/projects/flaws.png",
+    category: "TypeScript · Full-Stack · Live Production",
+    buttonText: "Live Site",
+    link: "https://flawswrldwide.com"
+  },
   {
     id: 1,
-    title: "Tag Along App",
-    description: "A comprehensive travel companion app offering seamless booking experiences and intelligent trip planning through innovative UX design.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    category: "Mobile App Design",
-    buttonText: "Prototype"
+    title: "SecurePulse",
+    description: "AI-integrated platform for commercial and industrial security clients, replacing traditional control rooms, manual patrols, and incident logging with automated monitoring.",
+    image: "/projects/securepulse.png",
+    category: "TypeScript · Full-Stack",
+    buttonText: "GitHub",
+    link: "https://github.com/andile593/SecurePulse"
   },
   {
     id: 2,
-    title: "Analytics Dashboard",
-    description: "Enterprise-level data visualization platform focusing on intuitive information architecture and user-centered design principles.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    category: "Web Application",
-    buttonText: "Live Site"
+    title: "Zimba Moves",
+    description: "Full-stack platform connecting customers with verified moving service providers across South Africa — from quote requests through to booking.",
+    image: "/projects/zimba-moves.png",
+    category: "TypeScript · Full-Stack",
+    buttonText: "GitHub",
+    link: "https://github.com/Embakh-Solutions/Zimba-Moves"
+  },
+  {
+    id: 3,
+    title: "EduGate",
+    description: "School registration platform letting students apply to schools online, with schools surfaced by relevant location.",
+    image: "/projects/edugate.png",
+    category: "React · Node.js · MERN",
+    buttonText: "GitHub",
+    link: "https://github.com/andile593/EduGate"
+  },
+  {
+    id: 4,
+    title: "TechCare",
+    description: "Medical dashboard displaying live patient data pulled from an external API, visualized with Chart.js.",
+    image: "/projects/techcare.png",
+    category: "Node.js · Chart.js",
+    buttonText: "GitHub",
+    link: "https://github.com/andile593/TechCare"
   }
 ];
+
+function ProjectImage({ src, title }: { src?: string; title: string }) {
+  const [failed, setFailed] = useState(false);
+
+  if (!src || failed) {
+    return (
+      <div className="w-full h-64 bg-gray-900 flex flex-col items-center justify-center text-gray-500">
+        <svg
+          className="w-10 h-10 mb-2 opacity-60"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.5}
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+          />
+        </svg>
+        <span className="text-xs tracking-wide uppercase">{title}</span>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={title}
+      className="w-full h-64 object-cover"
+      onError={() => setFailed(true)}
+    />
+  );
+}
 
 export default function Projects() {
   return (
@@ -27,28 +93,29 @@ export default function Projects() {
             CODED EXPERIENCES, DESIGNED WITH INTENTION
           </h3>
           <p className="text-gray-600 max-w-2xl">
-            From wireframes to deployable code, I lead projects through every phase—UX strategy, frontend UI, backend APIs, and database modeling. I’ve built full-stack applications using React, TypeScript, Node.js, PostgreSQL, and more, always ensuring design and function work seamlessly together.
-            <br/>
-              Each project reflects a blend of creativity and code—responsive interfaces, scalable backends, and thoughtful user flows.
+            From wireframes to deployable code, I lead projects through every phase—UX strategy, frontend UI, backend APIs, and database modeling. I've built full-stack applications using React, TypeScript, Node.js, PostgreSQL, and more, always ensuring design and function work seamlessly together.
+            <br />
+            Each project reflects a blend of creativity and code—responsive interfaces, scalable backends, and thoughtful user flows.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {projects.map((project) => (
+          {featuredProjects.map((project) => (
             <div key={project.id} className="project-card bg-white rounded-xl shadow-lg overflow-hidden">
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-64 object-cover" 
-              />
+              <ProjectImage src={project.image} title={project.title} />
               <div className="p-6">
                 <h4 className="font-bold text-xl mb-2 text-gray-900">{project.title}</h4>
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-600">{project.category}</span>
-                  <button className="bg-black text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 transition-colors">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 transition-colors"
+                  >
                     {project.buttonText}
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -56,9 +123,12 @@ export default function Projects() {
         </div>
 
         <div className="text-center">
-          <button className="border-2 border-black text-black px-8 py-3 rounded-md hover:bg-black hover:text-white transition-colors">
+          <Link
+            href="/projects"
+            className="inline-block border-2 border-black text-black px-8 py-3 rounded-md hover:bg-black hover:text-white transition-colors"
+          >
             View All Projects
-          </button>
+          </Link>
         </div>
       </div>
     </section>

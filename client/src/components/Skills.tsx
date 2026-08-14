@@ -1,15 +1,26 @@
-import { Users, Table, PenTool, TrendingUp, Palette, Smartphone, Layers, Zap } from 'lucide-react';
-import { SiFigma, SiAdobexd, SiSketch, SiAdobecreativecloud } from 'react-icons/si';
+import { Palette, Smartphone, Layers, Zap, Lock, Code2 } from 'lucide-react';
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNodedotjs,
+  SiPostgresql,
+  SiFigma,
+  SiGit,
+  SiPrisma,
+  SiPostman,
+  SiVercel,
+} from 'react-icons/si';
 
 const skillCategories = [
   {
     title: "Development",
     skills: [
-      { name: "JavaScript / TypeScript", icon: Users },
-      { name: "React, Redux", icon: Table },
-      { name: "Node.js & Express", icon: PenTool },
-      { name: "PostgreSQL, MongoDB, Prisma", icon: TrendingUp },
-      { name: "REST APIs, JWT Authentication", icon: TrendingUp }
+      { name: "JavaScript / TypeScript", icon: SiTypescript },
+      { name: "React, Redux", icon: SiReact },
+      { name: "Node.js & Express", icon: SiNodedotjs },
+      { name: "PostgreSQL, MongoDB, Prisma", icon: SiPostgresql },
+      { name: "REST APIs, JWT Authentication", icon: Lock }
     ]
   },
   {
@@ -25,12 +36,11 @@ const skillCategories = [
     title: "Tools & Tech",
     skills: [
       { name: "Figma, Adobe XD", icon: SiFigma },
-      { name: "Git & Github", icon: SiAdobexd },
-      { name: "VS Code", icon: SiSketch },
-      { name: "Prisma ORM", icon: SiAdobecreativecloud },
-      { name: "Postman/RapidAPI", icon: SiAdobecreativecloud },
-      { name: "Prisma ORM", icon: SiAdobecreativecloud },
-     { name: "Deployment: Vercel, Render, Netlify", icon: SiAdobecreativecloud },
+      { name: "Git & GitHub", icon: SiGit },
+      { name: "VS Code", icon: Code2 },
+      { name: "Prisma ORM", icon: SiPrisma },
+      { name: "Postman/RapidAPI", icon: SiPostman },
+      { name: "Deployment: Vercel, Render, Netlify", icon: SiVercel },
     ]
   }
 ];
