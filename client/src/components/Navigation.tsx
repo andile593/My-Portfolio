@@ -113,12 +113,16 @@ export default function Navigation() {
               >
                 Contact
               </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="bg-black text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 transition-colors w-fit"
-              >
-                Connect
-              </button>
+                          <a
+              href="/Andile_Mhlanga_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="bg-black text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 transition-colors w-fit"
+            >
+              Resume
+            </a>
+          </div>
             </div>
           </div>
         )}
