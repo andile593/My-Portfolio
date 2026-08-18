@@ -61,7 +61,7 @@ export default function Projects() {
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-600">{project.category}</span>
-                  
+                  <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
