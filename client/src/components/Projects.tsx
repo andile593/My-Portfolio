@@ -1,53 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-
-const featuredProjects = [
-  {
-    id: 0,
-    title: "Flaws",
-    description: "Live e-commerce storefront for a premium streetwear brand based in Johannesburg — full-stack build with real-time courier tracking, order management, and a decoupled frontend/backend architecture.",
-    image: "/projects/flaws.png",
-    category: "TypeScript · Full-Stack · Live Production",
-    buttonText: "Live Site",
-    link: "https://flawswrldwide.com"
-  },
-  {
-    id: 1,
-    title: "SecurePulse",
-    description: "AI-integrated platform for commercial and industrial security clients, replacing traditional control rooms, manual patrols, and incident logging with automated monitoring.",
-    image: "/projects/securepulse.png",
-    category: "TypeScript · Full-Stack",
-    buttonText: "GitHub",
-    link: "https://github.com/andile593/SecurePulse"
-  },
-  {
-    id: 2,
-    title: "Zimba Moves",
-    description: "Full-stack platform connecting customers with verified moving service providers across South Africa — from quote requests through to booking.",
-    image: "/projects/zimba-moves.png",
-    category: "TypeScript · Full-Stack",
-    buttonText: "GitHub",
-    link: "https://github.com/Embakh-Solutions/Zimba-Moves"
-  },
-  {
-    id: 3,
-    title: "EduGate",
-    description: "School registration platform letting students apply to schools online, with schools surfaced by relevant location.",
-    image: "/projects/edugate.png",
-    category: "React · Node.js · MERN",
-    buttonText: "GitHub",
-    link: "https://github.com/andile593/EduGate"
-  },
-  {
-    id: 4,
-    title: "TechCare",
-    description: "Medical dashboard displaying live patient data pulled from an external API, visualized with Chart.js.",
-    image: "/projects/techcare.png",
-    category: "Node.js · Chart.js",
-    buttonText: "GitHub",
-    link: "https://github.com/andile593/TechCare"
-  }
-];
+import { featuredProjects } from "../data/projects"; // adjust path to wherever projects.ts actually lives
 
 function ProjectImage({ src, title }: { src?: string; title: string }) {
   const [failed, setFailed] = useState(false);
@@ -108,7 +61,7 @@ export default function Projects() {
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-600">{project.category}</span>
-                  <a
+                  
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
