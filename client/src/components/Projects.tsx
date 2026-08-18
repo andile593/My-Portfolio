@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { featuredProjects } from "../data/projects"; // adjust path to wherever projects.ts actually lives
+import { featuredProjects } from "@/lib/projects";
+
 
 function ProjectImage({ src, title }: { src?: string; title: string }) {
   const [failed, setFailed] = useState(false);
