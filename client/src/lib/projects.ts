@@ -30,9 +30,9 @@ export const projects: Project[] = [
     id: 1,
     title: "SecurePulse",
     description:
-      "AI-integrated platform for commercial and industrial security clients, replacing traditional control rooms, manual patrols, and incident logging with automated monitoring.",
+      "AI-integrated platform for commercial and industrial security clients, built to replace traditional control rooms, manual patrols, and incident logging with automated monitoring.",
     longDescription:
-      "SecurePulse was built for commercial and industrial security clients and is deployed through security firms. It replaces manual control-room workflows — patrols, call logging, incident tracking — with a single AI-integrated dashboard that surfaces alarms, call activity, and dispatch status in real time.",
+      "SecurePulse was designed for commercial and industrial security clients, built to be deployed through security firms managing multiple sites. It replaces manual control-room workflows — patrols, call logging, incident tracking — with a single AI-integrated dashboard that surfaces alarms, call activity, and dispatch status in real time.",
     image: "/projects/securepulse.png",
     category: "TypeScript · Full-Stack",
     techStack: ["TypeScript", "React", "Node.js"],
@@ -52,34 +52,6 @@ export const projects: Project[] = [
     techStack: ["TypeScript", "React", "Node.js"],
     buttonText: "GitHub",
     link: "https://github.com/Embakh-Solutions/Zimba-Moves",
-    featured: true,
-  },
-  {
-    id: 3,
-    title: "EduGate",
-    description:
-      "School registration platform letting students apply to schools online, with schools surfaced by relevant location.",
-    longDescription:
-      "EduGate is a web-based school registration platform that lets students apply to schools online. Schools are surfaced based on the student's location, and the application walks through the registration flow end-to-end, built on the MERN stack.",
-    image: "/projects/edugate.png",
-    category: "React · Node.js · MERN",
-    techStack: ["React", "Node.js", "MongoDB", "Express"],
-    buttonText: "GitHub",
-    link: "https://github.com/andile593/EduGate",
-    featured: true,
-  },
-  {
-    id: 4,
-    title: "TechCare",
-    description:
-      "Medical dashboard displaying live patient data pulled from an external API, visualized with Chart.js.",
-    longDescription:
-      "TechCare is a medical dashboard that retrieves patient data from an external API and visualizes it with Chart.js, giving staff a fast, readable view of patient information without digging through raw records.",
-    image: "/projects/techcare.png",
-    category: "Node.js · Chart.js",
-    techStack: ["Node.js", "Chart.js", "EJS"],
-    buttonText: "GitHub",
-    link: "https://github.com/andile593/TechCare",
     featured: true,
   },
   {
