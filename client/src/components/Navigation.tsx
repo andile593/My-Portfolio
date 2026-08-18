@@ -113,7 +113,7 @@ export default function Navigation() {
               >
                 Contact
               </button>
-                          <a
+              <a
               href="/Andile_Mhlanga_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -122,7 +122,6 @@ export default function Navigation() {
             >
               Resume
             </a>
-          </div>
             </div>
           </div>
         )}
